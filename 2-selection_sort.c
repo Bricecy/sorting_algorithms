@@ -8,7 +8,7 @@
 
 void selection_sort(int *array, size_t size)
 {
-	size_t i, j, s, min;
+	size_t i, j, temp, min;
 
 	if (array == NULL)
 		return;
@@ -21,9 +21,9 @@ void selection_sort(int *array, size_t size)
 				min = j;
 		if (min != i)
 		{
-			s = array[min];
+			temp = array[min];
 			array[min] = array[i];
-			array[i] = s;
+			array[i] = temp;
 			print_array(array, size);
 		}
 	}
